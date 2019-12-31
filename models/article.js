@@ -7,7 +7,7 @@ var ArticleSchema = new Schema({
     title: {
         type: String,
         required: true,
-        unique: true
+        // unique: true
     },
 
     link: {
@@ -21,7 +21,7 @@ var ArticleSchema = new Schema({
             ref: "Note"
         }],
 
-        article: String
+
     },
     saved: {
         type: Boolean,

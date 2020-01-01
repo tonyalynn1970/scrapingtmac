@@ -12,8 +12,8 @@ var NoteSchema = new Schema({
     },
     body: {
         type: String,
-        trim: true
-
+        trim: true,
+        required: "Must enter a comment"
     }
 });
 

@@ -2,7 +2,6 @@ const cheerio = require('cheerio');
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
-// var logger = require("morgan");
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const db = require('./models/index');

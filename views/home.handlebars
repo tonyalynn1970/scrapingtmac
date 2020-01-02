@@ -12,14 +12,16 @@
             <div id=" articles"></div>
             <div id="notes"></div>
         </div>
-        <div>
+        <div style="width: 70%; float: left;">
             <ol>
                 {{#each articles}}
                 <li data-id={{this._id}}>{{this.title}}</li>
 
                 {{/each}}
             </ol>
-        </div>
+
+        </div style="width: 30%;">
+        <div id="note-div" style="width: 30%;"></div>
 
 
 

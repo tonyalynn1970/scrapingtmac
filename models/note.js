@@ -13,7 +13,7 @@ var NoteSchema = new Schema({
     body: {
         type: String,
         trim: true,
-        required: "Must enter a comment"
+        required: "Must enter a Note"
     }
 });
 

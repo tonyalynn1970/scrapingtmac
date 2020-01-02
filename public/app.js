@@ -2,14 +2,14 @@
 
 $(document).on("click", "li", function () {
   // Empty the notes from the note section
-  $("#notes").empty();
+  $("#note-div").empty();
   // Save the id from the p tag
   let thisId = $(this).attr("data-id");
   alert(thisId)
 
-  $("#notes").append("<input id= 'titleinput' name='title' >");
-  $("#notes").append("<div><textarea id='bodyinput' name='body'></textarea></div>");
-  $("#notes").append("<button data-id='" + thisId + "' id='savenote'>Save Note</button>");
+  $("#note-div").append("<input id= 'titleinput' name='title' >");
+  $("#note-div").append("<div><textarea id='bodyinput' name='body'></textarea></div>");
+  $("#note-div").append("<button data-id='" + thisId + "' id='savenote'>Save Note</button>");
 
 
 
@@ -94,7 +94,7 @@ function removeArticle() {
 
 
 // viewNote();
-postNote();
-deleteNote();
-removeArticle();
-saveArticle();
+// postNote();
+// deleteNote();
+// removeArticle();
+// saveArticle();

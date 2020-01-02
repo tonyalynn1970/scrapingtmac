@@ -13,7 +13,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Scrapers";
-mongoose.connect("mongodb://localhost/Scrapers", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/Scrapers", { useNewUrlParser: true });
 mongoose.connect(MONGODB_URI);
 app.get("/", function (req, res) {
     db.Article.find({})

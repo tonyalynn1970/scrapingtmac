@@ -2,6 +2,7 @@ const cheerio = require('cheerio');
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
+
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
 const db = require('./models/index');
@@ -11,7 +12,7 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/Scrapers";
 mongoose.connect("mongodb://localhost/Scrapers", { useNewUrlParser: true });
 app.get("/", function (req, res) {
     db.Article.find({})

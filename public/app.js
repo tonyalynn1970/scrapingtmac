@@ -93,8 +93,4 @@ function removeArticle() {
 
 
 
-// viewNote();
-// postNote();
-// deleteNote();
-// removeArticle();
-// saveArticle();
+

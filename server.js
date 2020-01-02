@@ -24,6 +24,7 @@ app.get("/", function (req, res) {
         })
 });
 app.get("/scrape", function (req, res) {
+    console.log('hit')
 
     axios.get("https://news.ycombinator.com/").then((response) => {
 
@@ -31,6 +32,7 @@ app.get("/scrape", function (req, res) {
 
         const $ = cheerio.load(response.data);
         const output = $('.storylink')
+        console.log(output)
         for (let i = 0; i < output.length; i++) {
 
             var title = $(output[i]).text()
@@ -46,6 +48,7 @@ app.get("/scrape", function (req, res) {
                     title: title,
                     link: link
                 }
+                console.log(r)
                 db.Article.create(r)
                     .then(function (dbArticle) {
 

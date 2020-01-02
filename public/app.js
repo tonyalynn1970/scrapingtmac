@@ -1,4 +1,4 @@
-
+$.get('/scrape')
 
 $(document).on("click", "li", function () {
   // Empty the notes from the note section
